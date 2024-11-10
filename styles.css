@@ -1,0 +1,23 @@
+.container {
+    color: rgb(126, 65, 65);
+    text-align: center;
+    margin: 10%;
+}
+
+h1 {
+    padding-bottom: 2%;;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: pink;
+}
+
+.pagination button {
+    background-color: #aa6e71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
