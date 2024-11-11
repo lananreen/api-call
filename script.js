@@ -9,24 +9,31 @@ async function fetchFacts() {
         facts = data.facts;
         displayFacts();
     } catch (error) {
-        console.error("Error fetching facts:", error);
+        console.error("Error :C ->", error);
     }
 }
 
 function displayFacts() {
     const factsContainer = document.getElementById("factsContainer");
-    factsContainer.innerHTML = ""; 
+    factsContainer.innerHTML = "";
 
     const start = currentPage * factsPerPage;
     const end = start + factsPerPage;
 
     const factsToDisplay = facts.slice(start, end);
 
-    factsToDisplay.forEach(fact => {
-        const factElement = document.createElement("p");
-        factElement.classList.add("fact");
-        factElement.textContent = fact;
-        factsContainer.appendChild(factElement);
+    factsToDisplay.forEach((fact, index) => {
+        const row = document.createElement("tr");
+        
+        const numberCell = document.createElement("td");
+        numberCell.textContent = start + index + 1;
+        row.appendChild(numberCell);
+        
+        const factCell = document.createElement("td");
+        factCell.textContent = fact;
+        row.appendChild(factCell);
+        
+        factsContainer.appendChild(row);
     });
 
     document.getElementById("prevBtn").disabled = currentPage === 0;
@@ -48,4 +55,3 @@ function prevPage() {
 }
 
 fetchFacts();
-
