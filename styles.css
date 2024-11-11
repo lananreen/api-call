@@ -1,23 +1,45 @@
 .container {
-    color: rgb(126, 65, 65);
+    color: rgb(90, 47, 47);
     text-align: center;
     margin: 10%;
 }
 
-h1 {
-    padding-bottom: 2%;;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: pink;
+    background-image: url("background_html.jpg");
 }
 
 .pagination button {
+    font-weight: bold;
     background-color: #aa6e71;
-    color: white;
+    color: rgb(77, 40, 40);
     border: none;
     padding: 10px 20px;
     margin: 10px 10px;
     cursor: pointer;
+}
+
+.facts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #c09393
+}
+
+.facts-table th {
+    padding: 12px;
+    border: 1px solid #533737;
+    text-align: center;
+}
+
+.facts-table td {
+    padding: 12px;
+    border: 1px solid #533737;
+    text-align: left;
+}
+
+.facts-table th {
+    background-color: #aa6e71;
+    color: rgb(90, 47, 47);
 }
