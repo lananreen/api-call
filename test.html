@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dog Facts ૮・ﻌ・ა</title>
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
     <div class="container">
         <h1>Dog Facts .ᐟ.ᐟ</h1>
+        <p>"This website calls api that displays dog facts from kinduff (By: Lana Noreen A. Tarlac)"</p>
         <script src="script.js"></script>
 
-        <div id="factsContainer" class="facts-container"></div>
-        
+        <table id="factsTable" class="facts-table">
+            <thead>
+                <tr>
+                    <th>number</th>
+                    <th>fact</th>
+                </tr>
+            </thead>
+            <tbody id="factsContainer"></tbody>
+        </table>
+
         <div class="pagination">
             <button id="prevBtn" onclick="prevPage()">Previous</button>
             <button id="nextBtn" onclick="nextPage()">Next</button>
